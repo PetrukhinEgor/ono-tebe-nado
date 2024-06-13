@@ -11,15 +11,21 @@
     <title>Оно тебе надо — аукцион вещей, в которые никто не верил</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="top">
       <nav class="header__menu">
         <ul class>
-          <li class="list_item_without_circle">главная</li>
-          <li>посмотреть лоты</li>
-          <li>об аукционе</li>
+          <li class="list_item_without_circle">
+            <a href ="#main">главная</a>
+          </li>
+          <li>
+            <a href="#lots">посмотреть лоты</a>
+          </li>
+          <li>
+            <a href="#about">об аукционе</a>
+          </li>
         </ul>
       </nav>
-      <img class="header__logo" src="images/logo-black.svg" />
+      <img class="header__logo" src="images/logo-black.svg" alt="Черный квадратный логотип 'оно тебе надо'"/>
       <div class="header__contacts">
         <a href="tel:+70000000000">+9 999 555 5555<br /></a>
         <a href="mailto:mail@example.com">info@sobaka.ge<br /></a>
@@ -28,7 +34,7 @@
     </header>
 
     <main>
-      <section class="cover">
+      <section class="cover" id="main">
         <div class="overlay"></div>
 
         <h1 class="cover__title">
@@ -43,16 +49,19 @@
           <p class="cover__description-text">
             АУКЦИОН ВЕЩЕЙ, В КОТОРЫЕ НИКТО НЕ ВЕРИЛ
           </p>
-          <p class="bet-button">СДЕЛАТЬ СТАВКУ</p>
+          <a href="#"> 
+            <button class="bet-button">СДЕЛАТЬ СТАВКУ</button>
+          </a>
+         
         </div>
       </section>
 
-      <section class="lots">
+      <section class="lots" id="lots">
         <h2 class="lots__heading">ЛОТЫ</h2>
         <ul class="lots__card-list">
           <li>
             <div class="overlay_list"></div>
-            <a>
+            <a href="#">
               <article class="card_type_film">
                 <h3>Фильм режиссёра, который бросил киношколу</h3>
                 <p>
@@ -65,7 +74,7 @@
           </li>
           <li>
             <div class="overlay_list"></div>
-            <a>
+            <a href="#">
               <article class="card_type_book">
                 <h3>
                   Книга, где описан<br />
@@ -86,7 +95,7 @@
           </li>
           <li>
             <div class="overlay_list"></div>
-            <a>
+            <a href="#">
               <article class="card_type_picture">
                 <h3>
                   Картина, которую повторит даже 5-летний сын маминой подруги
@@ -102,11 +111,11 @@
             </a>
           </li>
         </ul>
-        <a class="more">посмотреть больше</a>
+        <a class="more" href="#" >посмотреть больше</a>
       </section>
-      <section class="about">
+      <section class="about" id="about">
         <div class="black-circle">
-          <img class="white-logo" src="images/logo-white.svg" />
+          <img class="white-logo" src="images/logo-white.svg" alt="Белый квадратный логотип в черной окружности 'оно тебе надо'"/>
         </div>
         <div>
           <h2 class="about__title">ОБ АУКЦИОНЕ</h2>
@@ -140,20 +149,20 @@
       </div>
       <ul class="menu">
         <li class="footer__menu-link_active">
-          <a class="footer__menu-link">главная</a>
+          <a class="footer__menu-link" href="#main">главная</a>
         </li>
         <li>
-          <a class=".footer__menu-link">посмотреть лоты</a>
+          <a class=".footer__menu-link" href="#lots">посмотреть лоты</a>
         </li>
         <li>
-          <a class=".footer__menu-link">об аукционе</a>
+          <a class=".footer__menu-link" href="#about">об аукционе</a>
         </li>
       </ul>
-      <div class="socials">
-        <img src="images/yt.svg">
-        <img src="images/vk.svg">
-        <img src="images/pinterest.svg">
-      </div>
+      <a href= "#" class="socials">
+        <img href="#" src="images/yt.svg" alt="логотип-ссылка 'ютуб'">
+        <img href="#" src="images/vk.svg"alt="логотип-ссылка 'вконтакте'">
+        <img href="#" src="images/pinterest.svg"alt="логотип-ссылка 'пинтерест'">
+      </a>
     </footer>
   </body>
 </html>
