@@ -56,7 +56,6 @@
   margin-top: 96px;
   width: 1100px;
   height: 757px;
-  border: 1px solid seagreen;
   background-image: url("/images/cover.jpg");
   background-size: cover;
   position: absolute;
@@ -71,30 +70,60 @@
 }
 
 .cover__title {
-  margin-top: 165px;
-  margin-left: 50px;
-  width: 1000px;
+  margin-top: 161px;
+  margin-left: 51px;
+  width: 1042px;
   height: 355px;
   position: absolute;
   z-index: 0;
   color: white;
   font-size: 100px;
   font-weight: bold;
-  letter-spacing: 34px;
+  letter-spacing: 29px;
+  line-height: 125px;
 }
 
 .span_left {
-  display: block;
   text-align: left;
+  letter-spacing: 29px;
+}
+.span_left_cur{
+  margin-left: -22px;
 }
 
 .span_center {
-  display: block;
-  text-align: center;
+          /* display: block; */
+    text-align: center;
+    display: flex;
+    text-align: center;
+    /* line-height: 275px; */
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    margin-left: -190px;
+}
+.span_center_cur {
+      /* display: block; */
+      position: absolute;
+      text-align: center;
+      /* margin-bottom: 180px; */
+      top: 126px;
+      left: 595px;
 }
 .span_right {
-  display: block;
-  text-align: right;
+  /* display: block;
+  text-align: right; */
+  position: absolute;
+  left: 718px;
+  /* top: 36px; */
+  bottom: -15px;
+}
+.span_right_cur{
+  position: absolute;
+  /* margin-left: 584px; */
+  /* margin-top: 40px; */
+  left: 582px;
+  bottom: -14px;
 }
 
 .cover__subline {
@@ -276,7 +305,6 @@
 .about{
   width: 1052px;
   height: 595px;
-  border: 1px solid seagreen;
   position: absolute;
   z-index: -1;
   margin-top: 1873px;
