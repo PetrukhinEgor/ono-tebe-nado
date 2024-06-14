@@ -1,145 +1,120 @@
 .header {
-  min-width: 1052px;
-  min-height: 105px;
+  max-width: 1052px;
   margin-top: 92px;
   margin-left: 24px;
-
-  display: flex;
-  flex-direction: row;
+  margin-right: 24px;
+  display: grid;
+  grid-template-columns: 392.48px 148px 240.52px;
   justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+  border:1px solid springgreen;
 }
 
-.header__menu {
-  min-width: 391.48px;
-    min-height: 22px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: large;
-    margin-top: 5px;
+.header__menu-list{
+  font-size: larger;
+  max-width: 391.48px;
+  grid-template-columns: 67px 169px 129px;
+  column-gap: 23px;
+  display: grid;
+  list-style: circle;
+  margin-left: 26.52px;
+  justify-items: center;
 }
-.list_item_without_circle {
+
+.list_item_without_circle, .header__menu-list-link{
   list-style: none;
   text-decoration: none;
 }
 
-.header__menu ul {
-  display: flex;
-  flex-direction: row;
-  list-style: circle;
-  text-decoration: underline;
-}
-
-.header__menu li {
-  margin: 0px 19px;
-  padding-top: 2px;
-}
-
 .header__logo {
-  width: 145px;
   height: 105px;
-  margin-left: -164px;
+  /* Разобраться как расположить логотип по центру */
 }
-
 
 .header__contacts {
-  box-sizing: border-box;
-  width: 240.52px;
-  height: 98px;
+  max-width: 240.52px;
   margin: auto 0;
   font-size: larger;
-  margin-right: 54px;
+  margin-right: 25.48px;
   margin-top: 8px;
 }
 
-.cover {
+.cover{
+  /* display: flex; */
+  text-transform: uppercase;
   margin-top: 96px;
-  width: 1100px;
-  height: 757px;
-  background-image: url("/images/cover.jpg");
+  max-width: 1100px;
+  width: 100%;
+  background-image: url("../images/cover.jpg");/* У меня картинки подгружаются, но они прогружались и раньше. Надеюсь, сейчас все в порядке */
   background-size: cover;
-  position: absolute;
-  z-index: -2;
+  position: relative;
+  z-index: 0;
 }
 .overlay {
-  width: 1100px;
-  height: 757px;
   position: absolute;
+  inset: 0 0 0 0;
   z-index: -1;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-.cover__title {
-  margin-top: 161px;
-  margin-left: 51px;
-  width: 1042px;
-  height: 355px;
-  position: absolute;
-  z-index: 0;
+.cover__title, .overlay {
   color: white;
   font-size: 100px;
   font-weight: bold;
-  letter-spacing: 29px;
-  line-height: 125px;
 }
 
-.span_left {
-  text-align: left;
-  letter-spacing: 29px;
+.cover__title{
+  display: flex;
+  flex-direction: column;
+  line-height: 122px;
 }
-.span_left_cur{
-  margin-left: -22px;
+
+.cover__span-left{
+  max-width: 316px;
+  letter-spacing: 30px;
+  margin-left: 50px;
+  margin-top: 164px;
+}
+
+ .cover__span-left-item {
+  letter-spacing: 60px;
+}
+
+.cover__span-center{
+  margin-left: 336px;
+  letter-spacing: 30px;
+}
+
+.cover__span-right-item{
+  margin-left: 633px;
+  letter-spacing: 45px;
 }
 
 .span_center {
-          /* display: block; */
-    text-align: center;
-    display: flex;
-    text-align: center;
-    /* line-height: 275px; */
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
-    margin-left: -190px;
-}
-.span_center_cur {
-      /* display: block; */
-      position: absolute;
-      text-align: center;
-      /* margin-bottom: 180px; */
-      top: 126px;
-      left: 595px;
-}
-.span_right {
-  /* display: block;
-  text-align: right; */
-  position: absolute;
-  left: 718px;
-  /* top: 36px; */
-  bottom: -15px;
-}
-.span_right_cur{
-  position: absolute;
-  /* margin-left: 584px; */
-  /* margin-top: 40px; */
-  left: 582px;
-  bottom: -14px;
+  /* display: block; */
+  text-align: center;
+  display: flex;
+  text-align: center;
+  /* line-height: 275px; */
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  margin-left: -190px;
 }
 
 .cover__subline {
-  margin-top: 657px;
-  margin-left: 32px;
+  max-width: 972px;
+  margin-top: 135px;
+  padding-bottom: 41px;
+  margin-left: 78px;
   display: flex;
   color: white;
   font-size: 22px;
-  align-items: center;
-  justify-content: space-around;
-  align-content: stretch;
-  flex-direction: row;
+  justify-content: space-between;
 }
 .cover__description-text {
-  width: 637px;
-  height: 28px;
+  max-width: 637px;
   word-spacing: 18px;
 }
 .bet-button {
@@ -152,23 +127,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .lots {
-  position: absolute;
-  z-index: -1;
-  width: 1052px;
-  height: 692px;
-  margin-top: 1058px;
+  position: relative;
+  z-index: 1;
+  max-width: 1052px;
+  margin-top: 179px;
   margin-left: 22px;
 }
 
 .lots__heading {
+  text-transform: uppercase;
   width: 121px;
-  height: 47px;
-  margin-left: 29px;
-  font-size: xxx-large;
-  bottom: 32px;
+  margin-left: 40px;
+  margin-bottom:27px;
+  font-size: 40px;
+  font-weight: bold;
+
   position: relative;
 }
 
@@ -176,16 +153,15 @@
   display: flex;
   flex-direction: row;
   width: 1052px;
-  height: 563px;
   list-style: none;
-  position: absolute;
-  z-index: -2;
+  position: relative;
+  z-index: 0;
 }
 
-.card_type_film {
+.card_type_film  {
   width: 334px;
-  height: 563px;
-  background-image: url(/images/card-lot-01.jpg);
+  min-height: 563px;
+  background-image: url("../images/card-lot-01.jpg");
   background-size: cover;
   background-position: center;
   margin-right: 25px;
@@ -194,7 +170,7 @@
 .card_type_book {
   width: 334px;
   height: 563px;
-  background-image: url(/images/card-lot-02.jpg);
+  background-image: url("../images/card-lot-02.jpg");
   background-size: cover;
   background-position: center;
   margin-right: 25px;
@@ -202,23 +178,17 @@
 .card_type_picture {
   width: 334px;
   height: 563px;
-  background-image: url(/images/card-lot-03.jpg);
+  background-image: url("../images/card-lot-03.jpg");
   background-size: cover;
   background-position: center;
   margin-right: 25px;
 }
 
-.overlay_list {
-  width: 334px;
-  height: 563px;
-  position: absolute;
-  z-index: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-}
+
 
 .card_type_film h3 {
   width: 334px;
-  position: absolute;
+  position: relative;
   z-index: 1;
   text-decoration: underline;
   font-size: x-large;
@@ -231,7 +201,7 @@
 .card_type_film p {
   width: 254px;
   top: 321px;
-  position: absolute;
+  position: relative;
   z-index: 1;
   margin-left: 40px;
   margin-top: 51px;
@@ -242,7 +212,7 @@
 .card_type_book h3 {
   width: 254px;
   height: 110px;
-  position: absolute;
+  position: relative;
   z-index: 1;
   text-decoration: underline;
   font-size: x-large;
@@ -258,7 +228,7 @@
   width: 254px;
   height: 360px;
   top: 161px;
-  position: absolute;
+  position:relative;
   z-index: 1;
   margin-left: 40px;
   margin-top: 19px;
@@ -269,7 +239,7 @@
 .card_type_picture h3 {
   width: 254px;
   height: 110px;
-  position: absolute;
+  position: relative;
   z-index: 1;
   text-decoration: underline;
   font-size: x-large;
@@ -284,7 +254,7 @@
   width: 254px;
   height: 360px;
   top: 161px;
-  position: absolute;
+  position: relative;
   z-index: 1;
   margin-left: 40px;
   margin-top: 89px;
@@ -295,17 +265,15 @@
 .more {
   position: relative;
   top: 595px;
-  text-decoration: underline;
+  
   font-size: larger;
   margin-left: 43px;
 }
 
-
-
-.about{
+.about {
   width: 1052px;
   height: 595px;
-  position: absolute;
+  position: relative;
   z-index: -1;
   margin-top: 1873px;
   margin-left: 24px;
@@ -314,7 +282,7 @@
   grid-template-rows: 594px;
 }
 
-.black-circle{
+.black-circle {
   display: flex;
   background-color: black;
   border-radius: 50%;
@@ -326,46 +294,44 @@
   margin-top: 31px;
 }
 
-.white-logo{
+.white-logo {
   width: 148px;
   height: 114px;
 }
 
-.about__description_block{
+.about__description_block {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.about__title{
+.about__title {
+  text-transform: uppercase;
   font-size: xxx-large;
   margin-top: 130px;
   margin-left: 5px;
 }
-.about__text_p1{
+.about__text_p1 {
   font-size: larger;
-    margin: 96px 56px 7px 25px;
+  margin: 96px 56px 7px 25px;
 }
 
-.about__text_p2{
+.about__text_p2 {
   font-size: larger;
   margin: 23px 25px 7px 25px;
 }
 
-
-.footer{
+.footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
-  position: absolute;
-  top:2842px;
-
+  position: relative;
+  top: 2842px;
   width: 1000px;
   height: 98px;
   padding-bottom: 200px;
 }
 
-.menu{
+.menu {
   list-style: none;
   text-align: center;
   font-size: larger;
@@ -373,14 +339,14 @@
   text-decoration: underline;
 }
 
-.footer__menu-link{
+.footer__menu-link {
   text-decoration: underline;
 }
-.footer__menu-link_active .footer__menu-link{
+.footer__menu-link_active .footer__menu-link {
   text-decoration: none;
 }
 
-.socials{
+.socials {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -388,25 +354,24 @@
   width: 48px;
   height: 48px;
 }
-.socials img{
+.socials img {
   margin-right: 48px;
 }
 
-.footer__contacts{
+.footer__contacts {
   box-sizing: border-box;
   width: 240.52px;
   height: 98px;
-  
   font-size: larger;
   margin-right: 55px;
   margin-left: 50px;
   margin-top: 5px;
 }
 
-address{
+address {
   all: unset;
 }
-button{
-  all:unset;
+button {
+  all: unset;
 }
 

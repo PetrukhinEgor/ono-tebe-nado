@@ -7,15 +7,14 @@
     <link rel="stylesheet" href="fonts/fonts.css" />
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/style.css" />
-
     <title>Оно тебе надо — аукцион вещей, в которые никто не верил</title>
   </head>
   <body>
     <header class="header" id="top">
-      <nav class="header__menu">
-        <ul class>
+      <nav>
+        <ul class="header__menu-list">
           <li class="list_item_without_circle">
-            <a href ="#main">главная</a>
+            <a class="header__menu-list-link" href="#main">главная</a>
           </li>
           <li>
             <a href="#lots">посмотреть лоты</a>
@@ -25,42 +24,37 @@
           </li>
         </ul>
       </nav>
-      <img class="header__logo" src="images/logo-black.svg" alt="Черный квадратный логотип 'оно тебе надо'"/>
-      <div class="header__contacts">
+      <img
+        class="header__logo"
+        src="images/logo-black.svg"
+        alt="Черный квадратный логотип 'оно тебе надо'"
+      />
+      <address class="header__contacts">
         <a href="tel:+70000000000">+9 999 555 5555<br /></a>
-        <a href="mailto:mail@example.com">info@sobaka.ge<br /></a>
-        <address class="address">наб.Принсенграхт 263-265, Амстердам</address>
-      </div>
+        <a href="mailto:mail@example.com">info@sobaka.ge</a>
+        <p>наб.Принсенграхт 263-265, Амстердам</p>
+      </address>
     </header>
-
     <main>
       <section class="cover" id="main">
         <div class="overlay"></div>
-
         <h1 class="cover__title">
-          <span class="span_left">ОН</span>
-          <span class ="span_left_cur">О</span>
-          <span class="span_center">ТЕБ</span>
-          <span class="span_center_cur">Е</span>
-          <span class="span_right_cur">Н</span>
-          <span class="span_right">АДО</span>
+          <span class="cover__span-left">он<span class="cover__span-left cover__span-left-item">о</span></span>
+          <span class="cover__span-center">теб<span class="cover__span-center-item">е</span></span>
+          <span class="cover__span-right-item">н<span class="cover__span-right">адо</span></span>
         </h1>
         <div class="cover__subline">
           <p class="cover__description-text">
-            АУКЦИОН ВЕЩЕЙ, В КОТОРЫЕ НИКТО НЕ ВЕРИЛ
+            аукцион вещей, в которые никто не верил
           </p>
-          <a href="#"> 
-            <button class="bet-button">СДЕЛАТЬ СТАВКУ</button>
-          </a>
-         
+          <button class="bet-button" href="#top">сделать ставку</button>
         </div>
       </section>
-
+    </div>
       <section class="lots" id="lots">
-        <h2 class="lots__heading">ЛОТЫ</h2>
+        <h2 class="lots__heading">лоты</h2>
         <ul class="lots__card-list">
           <li>
-            <div class="overlay_list"></div>
             <a href="#">
               <article class="card_type_film">
                 <h3>Фильм режиссёра, который бросил киношколу</h3>
@@ -73,7 +67,6 @@
             </a>
           </li>
           <li>
-            <div class="overlay_list"></div>
             <a href="#">
               <article class="card_type_book">
                 <h3>
@@ -94,7 +87,6 @@
             </a>
           </li>
           <li>
-            <div class="overlay_list"></div>
             <a href="#">
               <article class="card_type_picture">
                 <h3>
@@ -111,14 +103,18 @@
             </a>
           </li>
         </ul>
-        <a class="more" href="#" >посмотреть больше</a>
+        <a class="more" href="#" target="_blank">посмотреть больше</a>
       </section>
       <section class="about" id="about">
         <div class="black-circle">
-          <img class="white-logo" src="images/logo-white.svg" alt="Белый квадратный логотип в черной окружности 'оно тебе надо'"/>
+          <img
+            class="white-logo"
+            src="images/logo-white.svg"
+            alt="Белый квадратный логотип в черной окружности 'оно тебе надо'"
+          />
         </div>
         <div>
-          <h2 class="about__title">ОБ АУКЦИОНЕ</h2>
+          <h2 class="about__title">об аукционе</h2>
           <div class="about__description_block">
             <p class="about__text_p1">
               Здесь вы не встретите очередное пафосное собрание невероятно
@@ -140,7 +136,6 @@
         </div>
       </section>
     </main>
-
     <footer class="footer">
       <div class="footer__contacts">
         <a href="tel:+70000000000">+9 999 555 5555<br /></a>
@@ -158,10 +153,14 @@
           <a class=".footer__menu-link" href="#about">об аукционе</a>
         </li>
       </ul>
-      <a href= "#" class="socials">
-        <img href="#" src="images/yt.svg" alt="логотип-ссылка 'ютуб'">
-        <img href="#" src="images/vk.svg"alt="логотип-ссылка 'вконтакте'">
-        <img href="#" src="images/pinterest.svg"alt="логотип-ссылка 'пинтерест'">
+      <a href="#" class="socials">
+        <img href="#" src="images/yt.svg" alt="логотип-ссылка 'ютуб'" />
+        <img href="#" src="images/vk.svg" alt="логотип-ссылка 'вконтакте'" />
+        <img
+          href="#"
+          src="images/pinterest.svg"
+          alt="логотип-ссылка 'пинтерест'"
+        />
       </a>
     </footer>
   </body>
