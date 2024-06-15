@@ -52,30 +52,32 @@
       </section>
     </div>
       <section class="lots" id="lots">
+        
         <h2 class="lots__heading">лоты</h2>
         <ul class="lots__card-list">
           <li>
             <a href="#">
-              <article class="card_type_film">
-                <h3>Фильм режиссёра, который бросил киношколу</h3>
-                <p>
+              <article class="card card_type_film">
+                <div class="overlay"></div>
+                <h3 class="card__title">Фильм режиссёра, который бросил киношколу</h3>
+                <p class="card__text">
                   Не просто бросил, а ушёл с первой лекции. Какой была бы ваша
-                  ставка,<br />
-                  если бы вы не знали, что режиссёр — Пол Томас Андерсон?
+                  ставка, если бы вы не знали, что режиссёр — Пол Томас Андерсон?
                 </p>
               </article>
             </a>
           </li>
           <li>
             <a href="#">
-              <article class="card_type_book">
-                <h3>
-                  Книга, где описан<br />
-                  один скучный день<br />
-                  из жизни<br />
+              <article class="card card_type_book">
+                <div class="overlay"></div>
+                <h3 class="card__title">
+                  Книга, где описан
+                  один скучный день
+                  из жизни
                   рекламного агента
                 </h3>
-                <p>
+                <p class="card__text">
                   Объёмом почти в тысячу страниц. Иногда без знаков препинания и
                   с переходами на древнеанглийский. В ней одновременно
                   рассказывается о 16 июня 1904 года и об истории литературы,
@@ -88,22 +90,23 @@
           </li>
           <li>
             <a href="#">
-              <article class="card_type_picture">
-                <h3>
+              <article class="card card_type_picture">
+                <div class="overlay"></div>
+                <h3 class="card__title">
                   Картина, которую повторит даже 5-летний сын маминой подруги
                 </h3>
-                <p>
+                <p class="card__text">
                   Ну действительно, там линия, тут кружочек, а здесь и вовсе
                   что-то похожее на инфузорию-туфельку. Никаких полей, лесов,
                   котиков... Сколько бы вы на такое поставили, если бы не знали,
-                  что это <br />— одна из<br />
+                  что это — одна из
                   революционных работ Кандинского?
                 </p>
               </article>
             </a>
           </li>
         </ul>
-        <a class="more" href="#" target="_blank">посмотреть больше</a>
+        <a class="lots__look-more-link" href="#" target="_blank">посмотреть больше</a>
       </section>
       <section class="about" id="about">
         <div class="black-circle">
@@ -116,14 +119,14 @@
         <div>
           <h2 class="about__title">об аукционе</h2>
           <div class="about__description_block">
-            <p class="about__text_p1">
+            <p class="about__text">
               Здесь вы не встретите очередное пафосное собрание невероятно
               дорогого антиквариата. Наши лоты вообще не должны были попасть ни
               на один аукцион. Потому что кому нужен дневник девочки-подростка
-              или картина, которую может нарисовать даже ребёнок?<br />
+              или картина, которую может нарисовать даже ребёнок?
               Кому нужны все эти странные вещи, созданные любителями?
             </p>
-            <p class="about__text_p2">
+            <p class="about__text">
               Слишком сложные или, наоборот, слишком простые. Опережающие своё
               время. В пух и прах растерзанные критиками. Непринятые и
               непонятые. Когда-то они казались просто неудачными. Но, несмотря
@@ -153,15 +156,11 @@
           <a class=".footer__menu-link" href="#about">об аукционе</a>
         </li>
       </ul>
-      <a href="#" class="socials">
-        <img href="#" src="images/yt.svg" alt="логотип-ссылка 'ютуб'" />
-        <img href="#" src="images/vk.svg" alt="логотип-ссылка 'вконтакте'" />
-        <img
-          href="#"
-          src="images/pinterest.svg"
-          alt="логотип-ссылка 'пинтерест'"
-        />
-      </a>
+      <div class="socials">
+        <a href="#top" target="_blank"><img href="#" src="images/yt.svg" alt="логотип-ссылка 'ютуб'" /></a>
+        <a href="#top" target="_blank"><img href="#" src="images/vk.svg" alt="логотип-ссылка 'вконтакте'" /></a>
+        <a href="#top" target="_blank"><img href="#" src="images/pinterest.svg" alt="логотип-ссылка 'пинтерест'"/></a>
+      </div>
     </footer>
   </body>
 </html>
