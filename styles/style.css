@@ -1,64 +1,46 @@
 .header {
-  max-width: 1052px;
   padding-top: 92px;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: 50px;
+  padding-right: 50px;
   padding-bottom: 96px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-content: space-between;
-  justify-items: center;
+  grid-template-columns: 1fr 148px 1fr;
   align-items: center;
-  border:1px solid springgreen;
 }
 
-.header__menu-list{
+.header__menu-list {
+  max-width: 389px;
   font-size: 18px;
-  max-width: 391.48px;
-  grid-template-columns: 67px 169px 129px;
-  column-gap: 23px;
-  display: grid;
   list-style: circle;
-  margin-left: 26.52px;
-  justify-items: center;
-
-  border:1px solid springgreen;
+  display: flex;
+  justify-content: space-between;
+  text-underline-offset: 5px;
 }
 
-
-.list_item_without_circle, .header__menu-list-link{
+.list_item_without_circle,
+.header__menu-list-link {
   list-style: none;
   text-decoration: none;
 }
 
 .header__logo {
   height: 105px;
-  margin-right: 75px;
-  /* Разобраться как расположить логотип по центру */
-
-  border:1px solid springgreen;
 }
 
 .header__contacts {
-  max-width: 240.52px;
+  max-width: 236px;
   font-size: 18px;
-  margin-top: 0px;
+  line-height: 24.3px;
   font-style: normal;
-  padding-left: 40px;
-  border: 1px solid springgreen;
+  justify-self: end;
+  text-underline-offset: 5px;
 }
 
-.header__contacts address{
-  all: unset;
-}
-
-.cover{
-  /* display: flex; */
+.cover {
   text-transform: uppercase;
-  /* margin-top: 96px; */
   max-width: 1100px;
   width: 100%;
-  background-image: url("../images/cover.jpg");/* У меня картинки подгружаются, но они прогружались и раньше. Надеюсь, сейчас все в порядке */
+  background-image: url(../images/cover.jpg); /* У меня картинки подгружаются, но они прогружались и раньше. Надеюсь, сейчас все в порядке */
   background-size: cover;
   position: relative;
   z-index: 0;
@@ -70,44 +52,42 @@
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-.cover__title{
+.cover__title {
   color: white;
   font-size: 100px;
   font-weight: bold;
   display: flex;
-  flex-direction: column;
   line-height: 122px;
-  border: 1px solid greenyellow;
-  margin: auto 50px;
-}
-
-.cover__span-left{
+  padding-left: 50px;
+  padding-right: 50px;
   letter-spacing: 30px;
-  margin-top: 163px;
+  flex-direction: column;
 }
 
-.cover__span-left-item {
+.span_line_left {
+  padding-top: 162px;
+}
+
+.span_line-center {
+  padding-top: 3px;
+  text-align: center;
+}
+
+.span_line-right {
+  text-align: right;
+}
+
+.letter-spacing-extended {
   letter-spacing: 60px;
 }
 
-.cover__span-center{
-  /* не уверен */
-  margin-left: 285px; 
-  letter-spacing: 30px;
-}
-
-.cover__span-center-item{
-  letter-spacing: 60px;
-}
-
-.cover__span-right-item{
-  margin-left: 583px;
-  letter-spacing: 60px;
+.no-letter-spacing {
+  letter-spacing: 0;
 }
 
 .cover__subline {
   max-width: 972px;
-  margin-top: 124px;
+  padding-top: 124px;
   padding-bottom: 51px;
   margin-left: 78px;
   display: flex;
@@ -116,35 +96,35 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .cover__description-text {
   display: flex;
-  max-width: 637px;
-  word-spacing: 18px;
+  max-width: 640px;
+  word-spacing: 19px;
 }
+
 .bet-button {
   border: 1px solid white;
   color: white;
   font-size: 22px;
   background-color: transparent;
   padding: 12px 31px 11px 32px;
-  font-family: 'Raleway', serif;
+  font-family: "Raleway", serif;
   text-transform: uppercase;
-  
 }
 
-.lots{
+.lots {
   max-width: 1052px;
   margin-top: 179px;
   margin-left: 22px;
   margin-right: 22px;
 }
 
-
 .lots__heading {
   text-transform: uppercase;
-  width: 121px;
+  max-width: 121px;
   margin-left: 40px;
-  margin-bottom:27px;
+  margin-bottom: 27px;
   font-size: 40px;
   font-weight: bold;
 }
@@ -152,55 +132,59 @@
 .lots__card-list {
   display: flex;
   flex-direction: row;
-  width: 1052px;
   list-style: none;
+  justify-content: space-between;
 }
 
-.lots__card-list a{
+
+
+.card-link{
+  display: block;
   text-decoration: none;
+  width: 334px;
+  height: 563px;
 }
 
-.card{
+.card {
   display: flex;
   width: 334px;
   min-height: 563px;
   background-size: cover;
   background-position: center;
-  margin-right: 25px;
   flex-direction: column;
   justify-content: space-between;
-
   position: relative;
   z-index: 0;
 }
 
-.card_type_film  {
-  background-image: url("../images/card-lot-01.jpg");
+.card_type_film {
+  background-image: url(../images/card-lot-01.jpg);
 }
 
 .card_type_book {
-  background-image: url("../images/card-lot-02.jpg");
+  background-image: url(../images/card-lot-02.jpg);
 }
 
 .card_type_picture {
-  background-image: url("../images/card-lot-03.jpg");
+  background-image: url(../images/card-lot-03.jpg);
 }
 
-.card__title{
+.card__title {
   text-decoration: underline;
   text-transform: uppercase;
   font-size: 22px;
-  color:white;
-  padding-top:51px;
-  padding-left:40px;
-  padding-right:40px;
+  color: white;
+  padding-top: 51px;
+  padding-left: 40px;
+  padding-right: 40px;
+  text-underline-offset: 3px;
 }
 
-.card__text{
-  color:white;
+.card__text {
+  color: white;
   font-size: 20px;
-  padding-left:40px;
-  padding-right:40px;
+  padding-left: 40px;
+  padding-right: 40px;
   padding-bottom: 48px;
 }
 
@@ -209,34 +193,30 @@
   margin-left: 42px;
   margin-top: 31px;
   font-size: 20px;
+  text-underline-offset: 3px;
 }
 
 .about {
-  width: 1052px;
   margin-top: 146px;
   margin-left: 24px;
   display: grid;
   grid-template-columns: 334px 717px;
-  grid-template-rows: 594px;
-
-  border:1px solid springgreen;
-
 }
 
 .black-circle {
   display: flex;
   background-color: black;
   border-radius: 50%;
-  width: 240px;
+  max-width: 240px;
   height: 240px;
   justify-content: center;
   align-items: center;
   margin-left: 47px;
-  margin-top: 31px;
+  margin-top: 35px;
 }
 
 .white-logo {
-  width: 148px;
+  max-width: 148px;
   height: 114px;
 }
 .about__title {
@@ -248,62 +228,57 @@
 
 .about__description_block {
   max-width: 693px;
-  display: flex;
-  flex-direction: column;
-  border:1px solid slateblue;
-  margin-top:100px;
+  display: grid;
+  margin-top: 100px;
+  margin-left: 27px;
+  row-gap: 27px;
 }
 
 .about__text {
-  font-size: larger;
   font-size: 20px;
 }
 
 .footer {
-  display: flex;
-  margin-top: 180px;
-  margin-left: 50px;
-  margin-right: 50px;
-  width: 1000px;
-  border: 1px solid springgreen;
-  justify-content: space-between;
+  max-width: 1000px;
+  padding-top: 180px;
+  margin: auto 50px;
+  padding-bottom: 88px;
+  display: grid;
+  grid-template-columns: 1fr 149px 1fr;
 }
 
-.menu {
-  list-style: none;
+.footer__menu {
   text-align: center;
-  font-size: larger;
-  text-decoration: underline;
-  border: 1px solid springgreen;
-
+  font-size: 18px;
+  text-underline-offset: 4px;
 }
 
+.footer__menu-list {
+  list-style: none;
+}
+
+.footer__menu-link_active,
 .footer__menu-link {
-  text-decoration: underline;
-}
-.footer__menu-link_active .footer__menu-link {
   text-decoration: none;
 }
 
 .socials {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  border: 1px solid springgreen;
+  max-width: 240px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-self: flex-end;
+  column-gap: 48px;
+}
 
-}
-.socials img{
-  width: 48px;
-  height: 48px;
-}
-.socials a{
-  width: 48px;
-  height: 48px;
-  margin:auto 24px;
+.socials img {
+  max-width: 48px;
 }
 
 .footer__contacts {
-  width: 240.52px;
-  font-size: larger;
+  max-width: 232px;
+  font-size: 18px;
+  line-height: 24.3px;
+  font-style: normal;
+  text-underline-offset: 4px;
 }
-
